@@ -9,28 +9,45 @@
 
 " Other general settings {
 	filetype plugin indent on
+  set autowrite
 	set backspace=indent,eol,start
-	set ic	"ignorecase
+  set confirm
+  set foldmethod=marker
+	set hlsearch
+	set ignorecase
+	set incsearch
+  set showcmd
+  set smartcase
 " }
 
 " UI stuff {
+  colorscheme darkblue
 	set cursorcolumn
 	set cursorline
-	set incsearch
 	set laststatus=2
 	set lazyredraw
 	set linespace=0
 	set list
 	set listchars=tab:>-,trail:-
 	set matchtime=5
-	set hlsearch
 	set nostartofline
 	set number		" line numbering
+  set numberwidth=1
 	set ruler
 	set showcmd	"show what we're typing
 	set showmatch	"show matching brackets
-	set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-" }
+  set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+  " }
 
-" Formatting {
-" }
+" Personal customizations {
+  " Navigate error list without :cnext and :cprevious
+  nmap <C-x>L :clist<CR>
+  nmap <C-x>P :cprevious<CR>
+  nmap <C-x>N :cnext<CR>
+
+  " No tabs !!! Tabs are evil !!!
+  set tabstop=2 shiftwidth=2 expandtab
+
+  " Timestamp
+  nmap <C-c><C-t> o@<C-R>=strftime("%H:%M")<CR><CR><CR>
+"}
