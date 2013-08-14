@@ -18,6 +18,7 @@
 	set incsearch
   set showcmd
   set smartcase
+  set noswapfile
 " }
 
 " UI stuff {
@@ -37,7 +38,7 @@
 	set showcmd	"show what we're typing
 	set showmatch	"show matching brackets
   set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-  " }
+" }
 
 " Personal customizations {
   " Navigate error list without :cnext and :cprevious
@@ -51,3 +52,8 @@
   " Timestamp
   nmap <C-c><C-t> o@<C-R>=strftime("%H:%M")<CR><CR><CR>
 "}
+
+" Lisp config {
+    let g:lisp_rainbow=1
+" }
+
