@@ -1,0 +1,23 @@
+# Get rid of annoying startup message.
+startup_message off
+
+# Get rid of the notificatio.n
+vbell off
+
+# This is sort of the whole point here (!)
+autodetach on
+
+# You can never have too much scrollback. It's for the "oh crap I ran "
+# a command that generated a bazillion pages of noise, what was I looking "
+# at before that?" scenario.
+defscrollback 20000
+
+# I prefer C-z to C-a
+escape ^Zz
+
+# This is just to make messages and copy marking look better
+sorendition 02 34     # yellow on blue
+
+# Some status is always useful. At a minimum, you want to know what tabs you have open.
+hardstatus alwayslastline
+hardstatus string '%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}'
