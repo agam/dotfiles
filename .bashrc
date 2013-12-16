@@ -94,9 +94,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# SSH to work
-alias rem='ssh -Y terminus.mtv'
-
 # File browser
 alias filebrowser='nautilus --no-desktop --browser'
 
