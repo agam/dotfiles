@@ -1,5 +1,15 @@
 " Agam's vimrc file 
 
+" We like plugins
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" All bundles go here
+Bundle 'cemerick/piggieback'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-fireplace'
+
 " Basics {
   set nocompatible 	"explicitly get out of vi-compatible mode
   set noexrc		"avoid reading local .exrc
@@ -22,8 +32,7 @@
 " }
 
 " UI stuff {
-  colorscheme darkblue
-  set cursorcolumn
+  colorscheme koehler
   set cursorline
   set laststatus=2
   set lazyredraw
