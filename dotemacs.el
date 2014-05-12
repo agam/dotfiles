@@ -23,6 +23,14 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+;; Installing packages is better than downloading and copy-pasting .el files
+(require 'package)
+(package-initialize)
+
+;; Set solarized theme
+;; Note: To get this, M-x package-install -> color-theme-solarized
+(load-theme 'solarized-dark t)
+
 ;; Lisp
 (require 'slime)
 (setq slime-lisp-implementations
