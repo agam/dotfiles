@@ -27,15 +27,17 @@
 (require 'package)
 (package-initialize)
 
+;; Add melpa and marmalade to the mix
+(setq package-archives '(("marmalade" . "https://marmalade-repo.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")
+			 ("gnu" . "https://elpa.gnu.org/packages/")))
+
 ;; Set solarized theme
 ;; Note: To get this, M-x package-install -> color-theme-solarized
 (load-theme 'solarized-dark t)
 
 ;; Lisp
 (require 'slime)
-(setq slime-lisp-implementations
-      '((ccl ("/usr/local/google/home/agam/bin/ccl64"))))
-(slime-setup)
 
 ;; When would I _not_ want column numbers ??
 (column-number-mode t)
