@@ -33,11 +33,11 @@
 			 ("gnu" . "https://elpa.gnu.org/packages/")))
 
 ;; Set solarized theme
-;; Note: To get this, M-x package-install -> color-theme-solarized
-(load-theme 'solarized-dark t)
+;; Note: To get this, M-x package-install -> solarized-theme
+(load-theme 'solarized t)
 
 ;; Lisp
-(require 'slime)
+;; (require 'slime)
 
 ;; When would I _not_ want column numbers ??
 (column-number-mode t)
@@ -46,6 +46,7 @@
 (show-paren-mode t)
 
 ;; Please don't show me the ugly "^L" characters
+(require 'pp-c-l)
 (pretty-control-l-mode t)
 
 ;; Make picking buffers and files a better experience
