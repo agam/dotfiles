@@ -50,8 +50,11 @@
 (pretty-control-l-mode t)
 
 ;; Make picking buffers and files a better experience
-(require 'ido)
-(ido-mode t)
+(require 'helm-config)
+(helm-mode 1)
+
+;; Saner undo/redo model
+(global-undo-tree-mode 1)
 
 ;; Quickly fix long lines
 (add-hook 'c-mode-common-hook
