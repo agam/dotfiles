@@ -49,12 +49,34 @@
 (require 'pp-c-l)
 (pretty-control-l-mode t)
 
+;; Don't create backup files -- I have _version control_ for that
+(setq make-backup-files nil)
+
 ;; Make picking buffers and files a better experience
 (require 'helm-config)
 (helm-mode 1)
 
 ;; Saner undo/redo model
 (global-undo-tree-mode 1)
+
+;; Allow multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; When I select a region and start typing, I obviously want
+;; to replace the text I've just selected (and I want to
+;; delete it, not add it to the kill ring (if I wanted to
+;; kill it, I would do this explicitly)
+(delete-selection-mode t)
+
+;; The default fill-column of 70 is pointless; whenever I care
+;; about the "wrap width" of lines in my code, I usually want 80.
+(set-fill-column 80)
+
+;; Ctrl-z makes the frame freeze ... why would I _ever_ want this?
+(put 'suspend-frame 'disabled t)
 
 ;; Quickly fix long lines
 (add-hook 'c-mode-common-hook
