@@ -2,7 +2,8 @@
 (require 'cl)
 
 ;; Replace meta sequence
-(global-set-key "\C-x\C-m" 'execute-extended-command)
+;; Update: replaced with Helm!
+;; (global-set-key "\C-x\C-m" 'execute-extended-command)
 
 ;; Backspace improvement
 (global-set-key "\C-w" 'backward-kill-word)
@@ -55,6 +56,9 @@
 ;; Make picking buffers and files a better experience
 (require 'helm-config)
 (helm-mode 1)
+
+;; Use my M-x key sequence to trigger Helm instead of the bultin
+(global-set-key (kbd "C-x C-m") 'helm-M-x)
 
 ;; Saner undo/redo model
 (global-undo-tree-mode 1)
