@@ -10,12 +10,6 @@
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\C-c\C-k" 'kill-region)
 
-;; Window navigation
-(global-set-key "\C-x\C-h" 'windmove-left)
-(global-set-key "\C-x\C-j" 'windmove-down)
-(global-set-key "\C-x\C-k" 'windmove-up)
-(global-set-key "\C-x\C-l" 'windmove-right)
-
 ;; Fonts and colors
 (global-font-lock-mode t)
 
@@ -130,3 +124,9 @@ character more, leaving POINT at the end of the previous line."
     (forward-char -1)
     (delete-region (point) cur-point)))
 (global-set-key "\C-cu" 'back-to-previous-line)
+
+;; Window navigation (moved to the end to overwrite conflicting assignments)
+(global-set-key "\C-x\C-h" 'windmove-left)
+(global-set-key "\C-x\C-j" 'windmove-down)
+(global-set-key "\C-x\C-k" 'windmove-up)
+(global-set-key "\C-x\C-l" 'windmove-right)
