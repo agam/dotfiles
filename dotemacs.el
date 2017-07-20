@@ -55,6 +55,7 @@
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 
 ;; Saner undo/redo model
+(require 'undo-tree)
 (global-undo-tree-mode 1)
 
 ;; Allow multiple cursors
