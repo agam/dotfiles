@@ -83,6 +83,17 @@
             (local-set-key "\C-cf" 'fill-paragraph)))
 
 ;;;;;;;;;;;;;;;;;;;;
+;; Refactoring support
+(require 'srefactor)
+(semantic-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;
+;; Snippets, because I am _sick_ of repeatedly typing in some stuff.
+(require 'yasnippet)
+(yas-global-mode 1)
+;; MEMO: Install the `yasnippets-snippets` package to get some good defaults.
+
+;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
 ;;;;;;;;;;;;;;;;;;;;
 
