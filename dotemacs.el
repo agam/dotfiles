@@ -1,3 +1,14 @@
+;;;; Meta-note: useful packages to install
+; helm
+; helm-swoop
+; clang-format
+; yasnippet
+; yasnippet-snippets
+; helm-ag
+; powerline
+; magit
+; smartparens
+
 ;; Common lisp stuff
 (require 'cl)
 
