@@ -8,6 +8,11 @@
 ; powerline
 ; magit
 ; smartparens
+; sly
+; sly-company
+; sly-quicklisp
+; sly-named-readtables
+; sly-macrostep
 
 ;; Common lisp stuff
 (require 'cl)
