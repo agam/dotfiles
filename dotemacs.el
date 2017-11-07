@@ -45,6 +45,16 @@
 ;; Lisp
 ;; (require 'slime)
 
+;; We don't use SLIME, coz we SLY!
+(setq inferior-lisp-program "/usr/bin/sbcl")
+
+(require 'sly-autoloads)
+(require 'sly-quicklisp-autoloads)
+
+(add-hook 'sly-mode-hook 'sly-company-mode)
+(add-to-list 'company-backends 'sly-company)
+(require 'sly-company)
+
 ;; When would I _not_ want column numbers ??
 (column-number-mode t)
 
