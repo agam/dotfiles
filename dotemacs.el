@@ -43,9 +43,10 @@
 			 ("melpa" . "https://melpa.org/packages/")
 			 ("gnu" . "https://elpa.gnu.org/packages/")))
 
-;; Set solarized theme
-;; Note: To get this, M-x package-install -> solarized-theme
-(load-theme 'solarized t)
+
+;; Doom theme coolness
+(require 'doom-themes)
+(load-theme 'doom-one-light t)
 
 ;; Lisp
 ;; (require 'slime)
