@@ -8,6 +8,11 @@
 ; powerline
 ; magit
 ; smartparens
+; pp-c-l
+
+;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
+
+;; Only for lisp
 ; sly
 ; sly-company
 ; sly-quicklisp
