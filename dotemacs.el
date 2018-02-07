@@ -9,6 +9,9 @@
 ; magit
 ; smartparens
 ; pp-c-l
+; srefactor
+; multiple-cursors
+; undo-tree
 
 ;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
 
