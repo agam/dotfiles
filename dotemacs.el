@@ -118,6 +118,10 @@
           (lambda ()
             (local-set-key "\C-cf" 'fill-paragraph)))
 
+;; clang-format before I save any C++ code
+(add-hook 'c++-mode-hook
+	  (lambda () (add-hook 'before-save-hook 'clang-format-buffer nil 'local)))
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; Refactoring support
 (require 'srefactor)
