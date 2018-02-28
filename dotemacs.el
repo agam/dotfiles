@@ -86,8 +86,9 @@
 (require 'helm-config)
 (helm-mode 1)
 
-;; Use my M-x key sequence to trigger Helm instead of the bultin
+;; Use my M-x key sequence (and others) to trigger Helm instead of the bultin
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; Saner undo/redo model
 (require 'undo-tree)
