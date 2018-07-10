@@ -122,6 +122,10 @@
 (add-hook 'c++-mode-hook
 	  (lambda () (add-hook 'before-save-hook 'clang-format-buffer nil 'local)))
 
+;; goimports is our friend
+;; Remember to run `go get golang.org/x/tools/cmd/goimports` first.
+(setq gofmt-command "goimports")
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; Refactoring support
 (require 'srefactor)
