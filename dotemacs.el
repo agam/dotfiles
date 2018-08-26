@@ -137,6 +137,13 @@
 (yas-global-mode 1)
 ;; MEMO: Install the `yasnippets-snippets` package to get some good defaults.
 
+;; Fix exec-path
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+;;;;;;;;;;;;;;;;;;;;
+;; The "just works" solution for Emacs and Haskell
+(add-hook 'haskell-mode-hook 'intero-mode)
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
 ;;;;;;;;;;;;;;;;;;;;
