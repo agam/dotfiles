@@ -132,6 +132,10 @@
 (semantic-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;
+;; Get `M-x gofmt` to do something better
+(setq gofmt-command "/Users/abrahma/go/bin/goimports")
+
+;;;;;;;;;;;;;;;;;;;;
 ;; Snippets, because I am _sick_ of repeatedly typing in some stuff.
 (require 'yasnippet)
 (yas-global-mode 1)
