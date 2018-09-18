@@ -15,6 +15,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+alias l="exa -lah"
+
 export PATH="$HOME/bin:$HOME/gocode/bin:/usr/local/go/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
