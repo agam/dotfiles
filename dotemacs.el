@@ -12,6 +12,7 @@
 ; srefactor
 ; multiple-cursors
 ; undo-tree
+; easy-kill
 
 ;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
 
@@ -147,6 +148,13 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; The "just works" solution for Emacs and Haskell
 (add-hook 'haskell-mode-hook 'intero-mode)
+
+;;;;;;;;;;;;;;;;;;;;
+;; Better text selection and cut/copy/paste
+(require 'easy-kill)
+(global-set-key [remap kill-ring-save] #'easy-kill)
+(global-set-key [remap mark-sexp] #'easy-mark)
+
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
