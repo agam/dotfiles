@@ -1,3 +1,8 @@
+;;;; Meta-note: usage
+; This used to be called `dotemacs.el`, and I pointed to it from a top-level `.emacs`.
+; However, recent versions of Emacs look for `init.el` within `~/.emacs.d` by default,
+; so simply placing this there has the desired effect !!
+
 ;;;; Meta-note: useful packages to install
 ; doom-themes
 ; company
