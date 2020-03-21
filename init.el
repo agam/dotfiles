@@ -20,6 +20,8 @@
 ; multiple-cursors
 ; undo-tree
 ; easy-kill
+; use-package
+; spaceline
 
 ;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
 
@@ -53,6 +55,7 @@
 ;; Installing packages is better than downloading and copy-pasting .el files
 (require 'package)
 (package-initialize)
+(require 'use-package)
 
 ;; Add melpa and marmalade to the mix
 (setq package-archives '(("marmalade" . "https://marmalade-repo.org/packages/")
@@ -90,6 +93,9 @@
 ;; Use my M-x key sequence (and others) to trigger Helm instead of the bultin
 (global-set-key (kbd "C-x C-m") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; Use helm-swoop by default ...
+(global-set-key (kbd "C-s") 'helm-swoop)
 
 ;; Saner undo/redo model
 (require 'undo-tree)
@@ -205,3 +211,13 @@ character more, leaving POINT at the end of the previous line."
 (global-set-key "\C-x\C-j" 'windmove-down)
 (global-set-key "\C-x\C-k" 'windmove-up)
 (global-set-key "\C-x\C-l" 'windmove-right)
+
+;; Get that ol' Spacemacs feeling
+(use-package spaceline
+	     :demand t
+	     :init
+	     (setq powerline-default-separator 'arrow-fade)
+	     :config
+	     (require 'spaceline-config)
+	     (spaceline-spacemacs-theme))
+
