@@ -1,22 +1,26 @@
+# Step zero: load antigen
+source /usr/share/zsh-antigen/antigen.zsh
 
-export ZSH=/home/ir/.oh-my-zsh
+# Step 1: Layer on oh-my-zsh
+antigen use oh-my-zsh
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# Step 2: load a theme
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time time)
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=2
+# Pre-requisite: `git clone https://github.com/zsh-users/zsh-autosuggestions` into `~/.zsh`
 
-plugins=(
-    git
-    history-substring-search
-    fasd
-)
+# Step 3: a few bundles
+antigen bundle git
+antigen bundle lein
+antigen bundle z
+antigen bundle fzf
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-source $ZSH/oh-my-zsh.sh
+# Step 4: apply bundles
+antigen apply
 
+# Note: path is set in ~/.zprofile
+# export PATH="$HOME/.cargo/bin::$HOME/software/bin:$PATH"
+
+# Step 5: aliases
 alias l="exa -lah"
-
-export PATH="$HOME/bin:$HOME/gocode/bin:/usr/local/go/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
