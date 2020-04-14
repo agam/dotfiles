@@ -65,7 +65,7 @@
 
 ;; Doom theme coolness
 (require 'doom-themes)
-(load-theme 'doom-snazzy t)
+(load-theme 'doom-dracula t)
 
 ;; Lisp
 ;; (require 'slime)
