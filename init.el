@@ -22,6 +22,7 @@
 ; easy-kill
 ; use-package
 ; spaceline
+; elixir-mode
 
 ;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
 
@@ -161,6 +162,9 @@
 (global-set-key [remap kill-ring-save] #'easy-kill)
 (global-set-key [remap mark-sexp] #'easy-mark)
 
+;;;;;;;;;;;;;;;;;;;;
+;; Elixir stuff
+(require 'elixir-mode)
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
