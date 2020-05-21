@@ -1,6 +1,9 @@
 # Step zero: load antigen
 source /usr/share/zsh-antigen/antigen.zsh
 
+## One option for Nix
+## source $(nix eval --raw 'nixpkgs.antigen')/share/antigen/antigen.zsh
+
 # Step 1: Layer on oh-my-zsh
 antigen use oh-my-zsh
 
