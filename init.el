@@ -167,6 +167,12 @@
 (require 'elixir-mode)
 
 ;;;;;;;;;;;;;;;;;;;;
+;; Org Stuff
+;;
+;; Log timestamps for TODO items
+(setq org-log-done 'time)
+
+;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
 ;;;;;;;;;;;;;;;;;;;;
 
