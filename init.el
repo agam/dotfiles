@@ -216,6 +216,11 @@ character more, leaving POINT at the end of the previous line."
     (delete-region (point) cur-point)))
 (global-set-key "\C-cu" 'back-to-previous-line)
 
+(defun kill-other-buffers ()
+  "Kill buffers other than the current one."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
 ;; Window navigation (moved to the end to overwrite conflicting assignments)
 (global-set-key "\C-x\C-h" 'windmove-left)
 (global-set-key "\C-x\C-j" 'windmove-down)
