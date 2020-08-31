@@ -23,6 +23,9 @@
 ; use-package
 ; spaceline
 ; elixir-mode
+; org-journal
+; deft
+; zetteldeft
 
 ;; Note: some themes require Emacs 25 to be present (disable them for Emacs 24)
 
@@ -169,8 +172,20 @@
 ;;;;;;;;;;;;;;;;;;;;
 ;; Org Stuff
 ;;
-;; Log timestamps for TODO items
+
+;; Journal directory
+(require 'org-journal)
+(setq org-journal-dir "/Users/abrahma/Documents/Org/ActivityLog")
+
+;; Log timestamps for TODO items in Org-mode
 (setq org-log-done 'time)
+
+(use-package deft
+  :ensure t
+  :custom
+    (deft-extensions '("org"))
+    (deft-directory "~/Documents/Org/Deft/")
+    (deft-use-filename-as-title t))
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Defined functions
