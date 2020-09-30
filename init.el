@@ -176,6 +176,7 @@
 ;; Journal directory
 (require 'org-journal)
 (setq org-journal-dir "/Users/abrahma/Documents/Org/ActivityLog")
+(setq org-journal-file-format "%Y%m%d.org")
 
 ;; Log timestamps for TODO items in Org-mode
 (setq org-log-done 'time)
