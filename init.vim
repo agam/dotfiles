@@ -62,7 +62,6 @@ Plug 'neomake/neomake'
 Plug 'neovim/nvim-lspconfig'
 Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
 
 " Floating terminal
 Plug 'voldikss/vim-floaterm'
@@ -139,11 +138,10 @@ lua <<EOF
 -- nvim_lsp object
 local nvim_lsp = require'lspconfig'
 
--- function to attach completion and diagnostics
+-- function to attach completion.
 -- when setting up lsp
 local on_attach = function(client)
     require'completion'.on_attach(client)
-    require'diagnostic'.on_attach(client)
 end
 
 -- Enable rust_analyzer
