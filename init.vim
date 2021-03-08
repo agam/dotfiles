@@ -1,6 +1,7 @@
 
 " Some common settings
 set relativenumber
+set ignorecase smartcase
 let mapleader = ","
 
 " Fast access to buffers
@@ -9,8 +10,6 @@ nnoremap <leader>m :bp<cr>
 
 " Quick escape
 imap jj <esc>
-cmap jj <esc>
-vmap jj <esc>
 
 " Quick save
 noremap <leader>w :w<cr>
@@ -19,7 +18,7 @@ noremap <leader>w :w<cr>
 noremap <leader>q :q<cr>
 
 " Quick config-load
-noremap <leader><leader> :source ~/.config/nvim/init.vim<cr>
+noremap <leader>l :source ~/.config/nvim/init.vim<cr>
 
 " Quick plug-install
 noremap <leader>p :PlugInstall<cr>
@@ -37,6 +36,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> rn <Plug>(coc-rename)
+
+" Launch Magit
+noremap <leader>mg :Magit<cr>
 
 " Instant floating terminal
 let g:floaterm_keymap_toggle = '<F1>'
@@ -99,6 +101,15 @@ Plug 'airblade/vim-gitgutter'
 
 " Better commeting support
 Plug 'preservim/nerdcommenter'
+
+" Halfway-decent Git integration
+Plug 'jreybert/vimagit'
+
+" Rust/cargo integration
+Plug 'rust-lang/rust.vim'
+
+" Sneak around text just a little bit faster
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 
