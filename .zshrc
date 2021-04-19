@@ -1,5 +1,5 @@
 # Step zero: load antigen
-source /usr/share/zsh-antigen/antigen.zsh
+source ~/antigen.zsh
 
 ## One option for Nix
 ## source $(nix eval --raw 'nixpkgs.antigen')/share/antigen/antigen.zsh
@@ -27,3 +27,5 @@ antigen apply
 
 # Step 5: aliases
 alias l="exa -lah"
+alias fd="fdfind"
+alias doom="~/.emacs.d/bin/doom"
