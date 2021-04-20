@@ -1,6 +1,6 @@
 
 " Some common settings
-set relativenumber
+set number relativenumber
 set ignorecase smartcase
 let mapleader = ","
 
