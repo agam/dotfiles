@@ -1,0 +1,15 @@
+set ignorecase
+set showmode
+set smartcase
+
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saves"
+noremap <leader>w :w!<CR>
+
+" Fast close"
+noremap <leader>q :q<CR>
+
+" Easy escaping to normal mode"
+imap jk <esc>
