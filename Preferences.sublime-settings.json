@@ -1,0 +1,15 @@
+{
+	"ignored_packages":
+	[
+		"Six",
+		"Vintage",
+		"Vintageous",
+	],
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
+	"theme": "Material-Theme.sublime-theme",
+	"font_size": 16,
+	"relative_line_numbers": true,
+	"neovintageous_build_version": 11100,
+	"vintageous_enable_sneak": true,
+	"vintageous_i_escape_jk": true,
+}
