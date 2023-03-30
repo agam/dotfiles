@@ -64,9 +64,24 @@ key_mapper('', '<leader>ff', ':Telescope find_files<CR>')
 key_mapper('', '<leader>fb', ':Telescope file_browser<CR>')
 key_mapper('', '<leader>rg', ':Telescope live_grep<CR>')
 key_mapper('', '<leader>bb', ':Telescope buffers<CR>')
+key_mapper('', '<leader>lr', ':Telescope lsp_references<CR>')
+key_mapper('', '<leader>ls', ':Telescope lsp_document_symbols<CR>')
+key_mapper('', '<leader>lw', ':Telescope lsp_dynamic_workspace_symbols<CR>')
+key_mapper('', '<leader>li', ':Telescope lsp_implementations<CR>')
+key_mapper('', '<leader>ld', ':Telescope lsp_definitions<CR>')
+key_mapper('', '<leader>jl', ':Telescope jumplist<CR>')
+key_mapper('', '<leader>tk', ':Telescope keymaps<CR>')
 
 -- Git aids
 key_mapper('', '<leader>gm', ':GitMessenger<CR>')
+
+-- Terminal keybindings
+key_mapper('n', '<leader>tt', '<CMD>lua require("FTerm").toggle()<CR>')
+key_mapper('t', '<leader>tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+-- LSP operations keybindings
+key_mapper('', '<leader>ln', ':lua vim.lsp.buf.rename()<CR>')
+key_mapper('', '<leader>lg', ':lua vim.lsp.buf.signature_help()<CR>')
 
 -- Some helpers
 
@@ -116,9 +131,13 @@ packer.startup(function()
   -- Go support
 --  use 'ray-x/go.nvim'
 --  use 'ray-x/guihua.lua' -- recommended if need floating window support
-  use 'neovim/nvim-lspconfig'
   use 'lewis6991/gitsigns.nvim'
   
+  -- A terminal
+  use "numToStr/FTerm.nvim"
+
+  -- Comment niceties
+  use 'numToStr/Comment.nvim'
 end
 )
 
@@ -144,6 +163,7 @@ local lspconfig = require'lspconfig'
 -- setup language servers here
 lspconfig.tsserver.setup({})
 lspconfig.gopls.setup({})
+lspconfig.pylsp.setup({})
 
 -- Telescope
 require("telescope").setup {
@@ -158,7 +178,6 @@ require("telescope").setup {
         },
         ["n"] = {
           -- your custom normal mode mappings
-          --
         },
       },
     },
@@ -171,4 +190,14 @@ require("telescope").load_extension "file_browser"
 -- Git integration
 require('gitsigns').setup()
 
+-- Floating terminal
+require'FTerm'.setup({
+    border = 'double',
+    dimensions  = {
+        height = 0.9,
+        width = 0.9,
+    },
+})
+
+require('Comment').setup()
 
